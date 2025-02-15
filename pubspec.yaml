@@ -13,6 +13,7 @@ dependencies:
   dio: ^5.8.0+1
   flutter:
     sdk: flutter
+  flutter_dotenv: ^5.2.1
   flutter_localizations:
     sdk: flutter
 
@@ -31,3 +32,4 @@ flutter:
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
+    - environments/.env
