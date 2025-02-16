@@ -1,3 +1,5 @@
+import 'package:flutter_earthquake_detector/src/shared/helpers/enum.dart';
+
 import 'base_service.dart';
 import 'package:dio/dio.dart';
 
@@ -7,14 +9,19 @@ class QueryService extends BaseService {
     String? startTime,
     String? endTime, {
     int? min,
+    EarthquakeOrderBy orderby = EarthquakeOrderBy.time,
+    AlertLevel? alertLevel,
+    FormatType formatType = FormatType.geojson,
   }) async {
     final response = await get(
       '/query',
       queryParameters: {
-        'format': 'geojson',
+        'format': formatType.value,
         'starttime': startTime,
         'endtime': endTime,
         'minmagnitude': min,
+        'orderby': orderby.value,
+        'alertlevel': alertLevel?.value,
       },
     );
     return response;
@@ -23,12 +30,12 @@ class QueryService extends BaseService {
   Future<Response> getEarthquakeCountData(
     String startTime,
     String endTime, {
-    String? format,
+    FormatType formatType = FormatType.text,
   }) async {
     final response = await get(
       '/count',
       queryParameters: {
-        'format': format,
+        'format': formatType.value,
         'starttime': startTime,
         'endtime': endTime,
       },
@@ -39,12 +46,12 @@ class QueryService extends BaseService {
   Future<Response> getEarthquakeVersionData(
     String startTime,
     String endTime, {
-    String? format,
+    FormatType formatType = FormatType.text,
   }) async {
     final response = await get(
       '/version',
       queryParameters: {
-        'format': format,
+        // 'format': formatType.value,
         'starttime': startTime,
         'endtime': endTime,
       },
