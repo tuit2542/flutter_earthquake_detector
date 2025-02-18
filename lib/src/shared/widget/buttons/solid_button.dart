@@ -13,11 +13,11 @@ class SolidButton extends StatelessWidget {
     this.borderRadius = 4,
     this.onClick,
     this.margin = const EdgeInsets.fromLTRB(0, 10, 0, 0),
-    this.buttonDisableColor = EssColors.thirdNeutralGreyColor,
-    this.buttonColor = EssColors.primaryBlueColor,
+    this.buttonDisableColor = SystemColors.thirdNeutralGreyColor,
+    this.buttonColor = SystemColors.primaryBlueColor,
     this.textColor = Colors.white,
-    this.highlightColor = EssColors.hoverColor,
-    this.pressColor = EssColors.pressColor,
+    this.highlightColor = SystemColors.hoverColor,
+    this.pressColor = SystemColors.pressColor,
   });
 
   final String label;
@@ -56,7 +56,7 @@ class SolidButton extends StatelessWidget {
         color: disable ? buttonDisableColor : buttonColor,
         borderRadius: BorderRadius.circular(borderRadius),
       ),
-      child: disable == true
+      child: disable
           ? Center(
               child: Text(
                 label,
@@ -68,7 +68,7 @@ class SolidButton extends StatelessWidget {
               child: InkWell(
                 hoverColor: highlightColor,
                 highlightColor: highlightColor,
-                splashColor: EssColors.pressColor,
+                splashColor: SystemColors.pressColor,
                 borderRadius: BorderRadius.circular(borderRadius),
                 onTap: onClick,
                 child: Center(

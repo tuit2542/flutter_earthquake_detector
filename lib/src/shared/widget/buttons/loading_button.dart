@@ -14,11 +14,11 @@ class LodingButton extends StatelessWidget {
     this.onClick,
     this.margin = const EdgeInsets.fromLTRB(0, 10, 0, 0),
     this.isUpdate = false,
-    this.buttonDisableColor = EssColors.thirdNeutralGreyColor,
-    this.buttonColor = EssColors.primaryBlueColor,
+    this.buttonDisableColor = SystemColors.thirdNeutralGreyColor,
+    this.buttonColor = SystemColors.primaryBlueColor,
     this.textColor = Colors.white,
-    this.highlightColor = EssColors.hoverColor,
-    this.pressColor = EssColors.pressColor,
+    this.highlightColor = SystemColors.hoverColor,
+    this.pressColor = SystemColors.pressColor,
   });
 
   final String label;
@@ -57,7 +57,7 @@ class LodingButton extends StatelessWidget {
               width: 25,
               height: 25,
               child: CircularProgressIndicator(
-                color: EssColors.primaryWhaleBlueColor,
+                color: SystemColors.primaryWhaleBlueColor,
               ),
             ),
           )
@@ -93,62 +93,62 @@ class LodingButton extends StatelessWidget {
 Color checkStatusButtonTypeColor(String check) {
   switch (check.trim().toLowerCase()) {
     case "approve":
-      return EssColors.approveColor;
+      return SystemColors.approveColor;
 
     case "revise":
-      return EssColors.reviseColor;
+      return SystemColors.reviseColor;
 
     case "waiting":
-      return EssColors.waitingColor;
+      return SystemColors.waitingColor;
 
     case "reject":
-      return EssColors.rejectColor;
+      return SystemColors.rejectColor;
 
     case "done":
-      return EssColors.doneColor;
+      return SystemColors.doneColor;
 
     case "draft":
-      return EssColors.draftColor;
+      return SystemColors.draftColor;
 
     case "verify":
-      return EssColors.verifyColor;
+      return SystemColors.verifyColor;
 
     case "inactive":
-      return EssColors.secondNeutralGreyColor;
+      return SystemColors.secondNeutralGreyColor;
 
     case "active":
-      return EssColors.systemSuccessColor;
+      return SystemColors.systemSuccessColor;
 
     default:
-      return EssColors.secondNeutralWhiteColor;
+      return SystemColors.secondNeutralWhiteColor;
   }
 }
 
 Color checkStatusTextColor(String check) {
   switch (check.trim().toLowerCase()) {
     case "approve":
-      return EssColors.textAproveColor;
+      return SystemColors.textAproveColor;
 
     case "revise":
-      return EssColors.textReviseColor;
+      return SystemColors.textReviseColor;
 
     case "waiting":
-      return EssColors.textWaitingColor;
+      return SystemColors.textWaitingColor;
 
     case "reject":
-      return EssColors.textRejectColor;
+      return SystemColors.textRejectColor;
 
     case "done":
-      return EssColors.textDoneColor;
+      return SystemColors.textDoneColor;
 
     case "draft":
-      return EssColors.textDraftColor;
+      return SystemColors.textDraftColor;
 
     case "verify":
-      return EssColors.textVerifyColor;
+      return SystemColors.textVerifyColor;
 
     case "inactive":
-      return EssColors.fourthNeutralGreyColor;
+      return SystemColors.fourthNeutralGreyColor;
 
     case "active":
       return Colors.white;

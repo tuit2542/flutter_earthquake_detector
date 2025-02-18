@@ -13,9 +13,9 @@ class OutlineButton extends StatelessWidget {
     this.borderRadius = 4,
     this.onClick,
     this.margin = const EdgeInsets.fromLTRB(0, 10, 0, 0),
-    this.outlineDisableColor = EssColors.thirdNeutralGreyColor,
-    this.outlineColor = EssColors.primaryBlueColor,
-    this.textColor = EssColors.thirdNeutralGreyColor,
+    this.outlineDisableColor = SystemColors.thirdNeutralGreyColor,
+    this.outlineColor = SystemColors.primaryBlueColor,
+    this.textColor = SystemColors.thirdNeutralGreyColor,
   });
 
   final String label;

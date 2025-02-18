@@ -4,28 +4,28 @@ import 'package:flutter_earthquake_detector/src/shared/style/theme_style.dart';
 Color checkStatusTextColor(String check) {
   switch (check.trim().toLowerCase()) {
     case "approve":
-      return EssColors.textAproveColor;
+      return SystemColors.textAproveColor;
 
     case "revise":
-      return EssColors.textReviseColor;
+      return SystemColors.textReviseColor;
 
     case "waiting":
-      return EssColors.textWaitingColor;
+      return SystemColors.textWaitingColor;
 
     case "reject":
-      return EssColors.textRejectColor;
+      return SystemColors.textRejectColor;
 
     case "done":
-      return EssColors.textDoneColor;
+      return SystemColors.textDoneColor;
 
     case "draft":
-      return EssColors.textDraftColor;
+      return SystemColors.textDraftColor;
 
     case "verify":
-      return EssColors.textVerifyColor;
+      return SystemColors.textVerifyColor;
 
     case "inactive":
-      return EssColors.fourthNeutralGreyColor;
+      return SystemColors.fourthNeutralGreyColor;
 
     case "active":
       return Colors.white;
@@ -38,45 +38,45 @@ Color checkStatusTextColor(String check) {
 Color checkStatusButtonTypeColor(String check) {
   switch (check.trim().toLowerCase()) {
     case "approve":
-      return EssColors.approveColor;
+      return SystemColors.approveColor;
 
     case "revise":
-      return EssColors.reviseColor;
+      return SystemColors.reviseColor;
 
     case "waiting":
-      return EssColors.waitingColor;
+      return SystemColors.waitingColor;
 
     case "reject":
-      return EssColors.rejectColor;
+      return SystemColors.rejectColor;
 
     case "done":
-      return EssColors.doneColor;
+      return SystemColors.doneColor;
 
     case "draft":
-      return EssColors.draftColor;
+      return SystemColors.draftColor;
 
     case "verify":
-      return EssColors.verifyColor;
+      return SystemColors.verifyColor;
 
     case "inactive":
-      return EssColors.secondNeutralGreyColor;
+      return SystemColors.secondNeutralGreyColor;
 
     case "active":
-      return EssColors.systemSuccessColor;
+      return SystemColors.systemSuccessColor;
 
     default:
-      return EssColors.secondNeutralWhiteColor;
+      return SystemColors.secondNeutralWhiteColor;
   }
 }
 
 Color magnitudeColor(double magnitude) {
   if (magnitude >= 8) {
-    return EssColors.textRejectColor;
+    return SystemColors.textRejectColor;
   } else if (magnitude >= 5) {
-    return EssColors.textWaitingColor;
+    return SystemColors.textWaitingColor;
   } else if (magnitude >= 3) {
-    return EssColors.textReviseColor;
+    return SystemColors.textReviseColor;
   } else {
-    return EssColors.textDoneColor;
+    return SystemColors.textDoneColor;
   }
 }
