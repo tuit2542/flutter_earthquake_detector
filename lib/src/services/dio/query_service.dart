@@ -30,6 +30,7 @@ class QueryService extends BaseService {
   Future<Response> getEarthquakeCountData(
     String startTime,
     String endTime, {
+    int? min,
     FormatType formatType = FormatType.text,
   }) async {
     final response = await get(
@@ -38,6 +39,7 @@ class QueryService extends BaseService {
         'format': formatType.value,
         'starttime': startTime,
         'endtime': endTime,
+        'minmagnitude': min,
       },
     );
     return response;

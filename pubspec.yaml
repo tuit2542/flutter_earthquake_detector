@@ -18,6 +18,11 @@ dependencies:
     sdk: flutter
   font_awesome_flutter: ^10.8.0
   intl: ^0.19.0
+  geolocator: ^13.0.2
+  latlong2: ^0.9.1
+  flutter_map: ^7.0.2
+  permission_handler: ^11.3.1
+  flutter_map_location_marker: ^9.1.1
 
 dev_dependencies:
   flutter_test:
@@ -34,4 +39,5 @@ flutter:
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
+    - assets/map/map_marker.png
     - environments/.env

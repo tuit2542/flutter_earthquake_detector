@@ -70,12 +70,12 @@ Color checkStatusButtonTypeColor(String check) {
 }
 
 Color magnitudeColor(double magnitude) {
-  if (magnitude >= 8) {
+  if (magnitude >= 6.5) {
     return SystemColors.textRejectColor;
-  } else if (magnitude >= 5) {
+  } else if (magnitude >= 3.5) {
     return SystemColors.textWaitingColor;
-  } else if (magnitude >= 3) {
-    return SystemColors.textReviseColor;
+  } else if (magnitude >= 2.5) {
+    return SystemColors.systemWarningColor;
   } else {
     return SystemColors.textDoneColor;
   }
