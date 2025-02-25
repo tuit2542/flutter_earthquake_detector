@@ -4,6 +4,7 @@
 .flutter-plugins-dependencies
 .packages
 pubspec.lock
+build/
 
 # Android related
 /android/.gradle/
@@ -19,6 +20,12 @@ pubspec.lock
 /ios/Runner.xcworkspace
 /ios/.symlinks
 /ios/Podfile.lock
+
+# Web related
+/web/.dart_tool/   
+/web/.packages     
+/web/build/        
+/web/packages/     
 
 # VS Code related
 .vscode/
