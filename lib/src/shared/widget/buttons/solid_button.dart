@@ -3,23 +3,6 @@ import 'package:flutter_earthquake_detector/src/shared/style/theme_style.dart';
 import 'package:flutter_earthquake_detector/src/shared/style/text_style.dart';
 
 class SolidButton extends StatelessWidget {
-  const SolidButton({
-    super.key,
-    required this.label,
-    this.width,
-    this.height,
-    this.disable = false,
-    this.fontSize = 16,
-    this.borderRadius = 4,
-    this.onClick,
-    this.margin = const EdgeInsets.fromLTRB(0, 10, 0, 0),
-    this.buttonDisableColor = SystemColors.thirdNeutralGreyColor,
-    this.buttonColor = SystemColors.primaryBlueColor,
-    this.textColor = Colors.white,
-    this.highlightColor = SystemColors.hoverColor,
-    this.pressColor = SystemColors.pressColor,
-  });
-
   final String label;
 
   final double? width;
@@ -45,6 +28,23 @@ class SolidButton extends StatelessWidget {
   final Color highlightColor;
 
   final Color pressColor;
+
+  const SolidButton({
+    super.key,
+    required this.label,
+    this.width,
+    this.height,
+    this.disable = false,
+    this.fontSize = 16,
+    this.borderRadius = 4,
+    this.onClick,
+    this.margin = const EdgeInsets.fromLTRB(0, 10, 0, 0),
+    this.buttonDisableColor = SystemColors.thirdNeutralGreyColor,
+    this.buttonColor = SystemColors.primaryBlueColor,
+    this.textColor = Colors.white,
+    this.highlightColor = SystemColors.hoverColor,
+    this.pressColor = SystemColors.pressColor,
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -30,6 +30,16 @@ enum FormatType {
   const FormatType(this.value);
 }
 
+enum TimeFormat {
+  dateApi("yyyy-MM-dd"),
+  dateTimeApi("yyyy-MM-dd HH:mm"),
+  dateWidget("dd/MM/yyyy"),
+  timeWidget("HH:mm");
+
+  final String value;
+  const TimeFormat(this.value);
+}
+
 enum EventType {
   accidentalExplosion("accidental explosion"),
   acousticNoise("acoustic noise"),

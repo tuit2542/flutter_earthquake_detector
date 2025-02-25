@@ -41,6 +41,7 @@ class BaseService {
     String endpoint, {
     Map<String, dynamic>? queryParameters,
   }) async {
+    print("Requesting: ${dio.options.baseUrl}/query");
     try {
       final response =
           await dio.get(endpoint, queryParameters: queryParameters);

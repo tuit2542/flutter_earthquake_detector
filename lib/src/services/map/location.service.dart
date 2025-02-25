@@ -23,7 +23,7 @@ class LocationService {
         throw Exception("Permission denied.");
       }
     }
-
+    ///กรณีที่ถูก Always Denied 
     if (permission == LocationPermission.deniedForever) {
       throw Exception(
           "Permission permanently denied. Please enable it in Settings.");

@@ -3,48 +3,58 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
 class CustomMarker extends StatelessWidget {
-  const CustomMarker({
-    super.key,
-    required this.lat,
-    required this.lng,
-    required this.mapRotation,
-    this.width = 40,
-    this.height = 40,
-    this.disable = false,
-    this.widget,
-  });
-
-  final double lat;
-
-  final double lng;
-
   final double width;
 
   final double height;
 
   final bool disable;
 
-  final Widget? widget;
-
   final double mapRotation;
+
+  final Widget? markerIcon;
+
+  final List<Map<String, dynamic>> markerList;
+
+  final VoidCallback? onClick;
+
+  const CustomMarker({
+    super.key,
+    required this.mapRotation,
+    required this.markerList,
+    this.width = 40,
+    this.height = 40,
+    this.disable = false,
+    this.markerIcon,
+    this.onClick,
+  });
 
   @override
   Widget build(BuildContext context) {
     return MarkerLayer(
       markers: [
-        Marker(
-          point: LatLng(lat, lng),
-          width: width,
-          height: height,
-          child: widget ??
-              Padding(
-                padding:
-                    const EdgeInsets.only(bottom: 5), // 👈 Add margin here
-                child: Transform.rotate(
-                  angle: -mapRotation * pi / 180,
-                  child: Image.asset("assets/map/map_marker.png"),
+        ...markerList.map(
+          (item) => Marker(
+            point: item['latlng'],
+            width: width,
+            height: height,
+            child: markerIcon ??
+                InkWell(
+                  onTap: disable ? () {} : onClick,
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(bottom: 5), // 👈 Add margin here
+                    child: Transform.rotate(
+                      angle: -mapRotation * pi / 180,
+                      child: const Icon(
+                        Icons.wifi_tethering,
+                        color: Colors.red,
+                        size: 30,
+                      ),
+                      // Image.asset("assets/map/map_marker.png"),
+                    ),
+                  ),
                 ),
-              ),
+          ),
         ),
       ],
     );
