@@ -1,6 +1,6 @@
 # flutter_earthquake_detector
 
-A new Flutter project.
+A real-time earthquake detection and reporting app with interactive map visualization.
 
 ## Getting Started
 
@@ -27,3 +27,12 @@ the `lib/src/localization` directory.
 
 To support additional languages, please visit the tutorial on
 [Internationalizing Flutter apps](https://flutter.dev/to/internationalization).
+
+## Model 
+
+When model that using JSON annotation created, changed, deleted. 
+need to run below command to the terminal.
+
+`flutter pub run build_runner build`
+or
+`flutter pub run build_runner watch`
